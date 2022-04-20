@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "gmarket";
+    src: url("GmarketSansTTF/GmarketSansTTFMedium.ttf") format("ttf");
+}
+
+body {
+    font-family: gmarket;
+
+}
+
+.masthead .container {
+    background-color: brown;
+}
+
+header.masthead {
+    background-image: url("../img/시안2.png");
+}

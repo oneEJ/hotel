@@ -1,0 +1,297 @@
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {text-decoration: none;
+    cursor: pointer;
+}
+
+.title {
+    background-color: rgb(253, 158, 190);
+    padding-bottom: 6rem;
+}
+.title_top img {
+    width: 65rem;
+    padding-left: 10rem;
+}
+.title_top {position: relative;}
+.title_top::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5rem;
+    top: 5rem;
+    width: 70rem;
+    height: 25rem;
+    background: url(../img/cloud.png) no-repeat;
+    background-size: 70rem;
+}/*순서. z-index가 안먹네*/
+
+.title_top {font-size: 1.5rem;}
+
+@media (max-width: 576px) {
+    .title_top img {
+        width: 30rem;
+        padding-left: 5rem;
+    }
+    .title_top::before{
+        display: none;
+    }
+}
+
+
+.title_text span { font-weight: bold;}
+.title_text a { 
+    color: white;
+    display: inline-block;
+    background-color: rgb(96, 188, 231);
+    width: 12rem;
+    padding: 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.title_text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 35rem;
+    width: 60rem;
+    height: 25rem;
+    background: url(../img/pool.png) no-repeat;
+    background-size: 25rem;
+}
+
+.title_text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 25rem;
+    width: 25rem;
+    height: 20rem;
+    background: url(../img/beach.png) no-repeat;
+    background-size: 20rem;
+}
+
+
+@media (max-width: 576px) { /*media를 한곳에 쓰는게 아니라 본인꺼 아래에서 해야되나먹히는 듯*/
+    .title_text::before{
+        display: none;
+    }
+    .title_text::after{
+        display: none;
+    }
+}
+
+.main {
+    background-color: palevioletred;
+}
+
+.ticket {
+    position: relative;
+}
+.ticket::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 15rem;
+    top: -5.6rem;
+    width: 60rem;
+    height: 30rem;
+    background: url(../img/ticket2.png) no-repeat;
+    background-size: 60rem;
+}
+
+@media (max-width: 992px) {
+    .ticket::before {
+        background-size: 40rem;   
+    }
+}
+@media (max-width: 576px) {
+    .ticket {
+        background-color: #fff;
+    }
+    .ticket::before {
+        display: none;
+    }
+}
+
+
+
+.ticket_left {
+    z-index: 10;
+    width: 35rem;
+    padding: 1rem 2rem;
+}
+
+.ticket_left .ticket_location {
+    color: rgb(81, 113, 252);
+    font-weight: bold;
+    font-size: 3rem;
+    padding-bottom: 1.2rem;
+    margin-left: -0.5rem;
+    margin-top: 0.5rem;
+}
+
+.ticket_left > p {
+    text-decoration: underline;
+    color: rgb(65 65 65 / 57%);
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 1rem 0 0.5rem;
+}
+
+.ticket_left .coupon {
+    display: none;
+}
+
+.ticket_left > span {
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.ticket_location .arrows {display: none;}
+.ticket_location span:last-child {
+    margin-left: 10rem;
+}
+
+@media (max-width: 576px) {
+    .ticket_location .arrows {
+        display: inline-block;
+        margin-left: 3rem;
+    }
+    .ticket_location span:last-child {
+        margin-left: 3rem;
+    }
+    .ticket_left .coupon {
+        display: block;
+        color: white;
+        background-color: rgb(81, 113, 252);
+        margin: 2rem 0;
+        padding: 1rem 0;
+    }
+}
+
+.ticket_right {
+    width: 10rem;
+    z-index: 5;
+    margin-top: 4rem;
+    padding-left: 3.2rem;
+}
+
+.ticket_right p {
+    font-weight: bold;
+}
+
+.ticket_right a {
+    display: block;
+}
+
+.ticket_right a span {
+    display: none;
+}
+.ticket_right img {
+    width: 6.5rem;
+}
+
+@media (max-width: 576px) {
+    .ticket_right {display: none;}
+    /* .ticket_right {
+    margin-left: 11rem;
+    margin-bottom: 3rem;
+    padding: 0;
+    }
+    .ticket_right a span {
+        display: block;
+    } */
+}
+
+
+.main_bottom {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    color: #fff;
+    position: relative;
+}
+
+.main_bottom::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: rem;
+    bottom: rem;
+    top: -3.4rem;
+    right: 0rem;
+    width: 25rem;
+    height: 22rem;
+    background: url(../img/people.png) no-repeat;
+    background-size: 25rem;
+}
+
+@media (max-width: 576px) {
+    .main_bottom {
+        text-align: center;
+    }
+    .main_bottom::before {
+        display: none;
+    }
+}
+
+
+.main_bottom li span:first-child {
+    background-color: hotpink;
+    display: inline-block;
+    width: 8rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5rem;
+}
+
+.main_bottom li span:last-child {
+    font-size: 1.2rem;
+    width: 30rem;
+    display: inline-block;
+    text-align: left;
+    margin-left: 2rem;
+    padding-top: 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    vertical-align: top;
+}
+
+
+@media (max-width: 576px) {
+    .main_bottom {
+        margin-top: 3rem;
+    }
+    .main_bottom li {
+        left: 0;
+    }
+    .main_bottom li span:last-child {
+        width: 20rem;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+}
+.main_info {
+    background-color: skyblue;
+    padding: 7rem;
+}
+.main_info img {
+    width: 20rem;
+    padding: 2rem;
+}
+
+/* @media (max-width: 576px) {
+    .main_info {width: ;}
+
+} */
